@@ -1,4 +1,4 @@
-package com.goodbuy.googbuylogin.exception;
+package com.goodbuy.googbuylogin.login.exception;
 
 /**
  * @description:

@@ -1,11 +1,11 @@
-package com.goodbuy.googbuylogin.controller;
+package com.goodbuy.googbuylogin.login.controller;
 
-import com.goodbuy.googbuylogin.entity.UserInfo;
-import com.goodbuy.googbuylogin.service.UserInfoService;
+import com.goodbuy.googbuylogin.login.entity.UserInfo;
+import com.goodbuy.googbuylogin.login.service.UserInfoService;
+import jakarta.annotation.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 
 /**
  * (UserInfo)表控制层
@@ -22,17 +22,6 @@ public class UserInfoController {
     @Resource
     private UserInfoService userInfoService;
 
-    /**
-     * 分页查询
-     *
-     * @param userInfo 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    @GetMapping
-    public ResponseEntity<Page<UserInfo>> queryByPage(UserInfo userInfo, PageRequest pageRequest) {
-        return ResponseEntity.ok(this.userInfoService.queryByPage(userInfo, pageRequest));
-    }
 
     /**
      * 通过主键查询单条数据

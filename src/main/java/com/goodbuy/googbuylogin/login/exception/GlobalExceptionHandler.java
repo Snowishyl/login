@@ -1,7 +1,7 @@
-package com.goodbuy.googbuylogin.exception;
+package com.goodbuy.googbuylogin.login.exception;
 
 
-import com.goodbuy.googbuylogin.Result;
+import com.goodbuy.googbuylogin.login.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;

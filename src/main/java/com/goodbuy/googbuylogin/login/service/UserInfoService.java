@@ -1,8 +1,6 @@
-package com.goodbuy.googbuylogin.service;
+package com.goodbuy.googbuylogin.login.service;
 
-import com.goodbuy.googbuylogin.entity.UserInfo;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+import com.goodbuy.googbuylogin.login.entity.UserInfo;
 
 /**
  * (UserInfo)表服务接口
@@ -19,16 +17,6 @@ public interface UserInfoService {
      * @return 实例对象
      */
     UserInfo queryById(Long id);
-
-    /**
-     * 分页查询
-     *
-     * @param userInfo 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    Page<UserInfo> queryByPage(UserInfo userInfo, PageRequest pageRequest);
-
     /**
      * 新增数据
      *

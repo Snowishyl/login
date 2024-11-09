@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.goodbuy.googbuylogin.dao.UserInfoDao">
 
-    <resultMap type="com.goodbuy.googbuylogin.entity.UserInfo" id="UserInfoMap">
+    <resultMap type="com.goodbuy.googbuylogin.login.entity.UserInfo" id="UserInfoMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="role" column="role" jdbcType="INTEGER"/>
         <result property="description" column="description" jdbcType="VARCHAR"/>

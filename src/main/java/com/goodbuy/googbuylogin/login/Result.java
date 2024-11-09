@@ -1,8 +1,8 @@
-package com.goodbuy.googbuylogin;
+package com.goodbuy.googbuylogin.login;
 
 
 
-import com.goodbuy.googbuylogin.exception.ExceptionMsg;
+import com.goodbuy.googbuylogin.login.exception.ExceptionMsg;
 
 import java.io.Serializable;
 

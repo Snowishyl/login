@@ -1,13 +1,11 @@
-package com.goodbuy.googbuylogin.dao;
+package com.goodbuy.googbuylogin.login.mapper;
 
-import com.goodbuy.googbuylogin.entity.UserInfo;
+import com.goodbuy.googbuylogin.login.entity.UserInfo;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 /**
  * (UserInfo)表数据库访问层
- *
  * @author makejava
  * @since 2024-11-09 11:50:32
  */
@@ -21,14 +19,6 @@ public interface UserInfoDao {
      */
     UserInfo queryById(Long id);
 
-    /**
-     * 查询指定行数据
-     *
-     * @param userInfo 查询条件
-     * @param pageable         分页对象
-     * @return 对象列表
-     */
-    List<UserInfo> queryAllByLimit(UserInfo userInfo, @Param("pageable") Pageable pageable);
 
     /**
      * 统计总行数

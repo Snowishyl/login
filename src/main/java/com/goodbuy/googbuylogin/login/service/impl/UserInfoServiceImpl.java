@@ -1,14 +1,10 @@
-package com.goodbuy.googbuylogin.service.impl;
+package com.goodbuy.googbuylogin.login.service.impl;
 
-import com.goodbuy.googbuylogin.entity.UserInfo;
-import com.goodbuy.googbuylogin.dao.UserInfoDao;
-import com.goodbuy.googbuylogin.service.UserInfoService;
+import com.goodbuy.googbuylogin.login.entity.UserInfo;
+import com.goodbuy.googbuylogin.login.mapper.UserInfoDao;
+import com.goodbuy.googbuylogin.login.service.UserInfoService;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-
-import javax.annotation.Resource;
 
 /**
  * (UserInfo)表服务实现类
@@ -32,18 +28,6 @@ public class UserInfoServiceImpl implements UserInfoService {
         return this.userInfoDao.queryById(id);
     }
 
-    /**
-     * 分页查询
-     *
-     * @param userInfo 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
-    @Override
-    public Page<UserInfo> queryByPage(UserInfo userInfo, PageRequest pageRequest) {
-        long total = this.userInfoDao.count(userInfo);
-        return new PageImpl<>(this.userInfoDao.queryAllByLimit(userInfo, pageRequest), pageRequest, total);
-    }
 
     /**
      * 新增数据

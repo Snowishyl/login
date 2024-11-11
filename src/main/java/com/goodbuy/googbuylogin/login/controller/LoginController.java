@@ -1,7 +1,7 @@
 package com.goodbuy.googbuylogin.login.controller;
 
 import com.goodbuy.googbuylogin.login.Result;
-import com.goodbuy.googbuylogin.login.entity.UserInfo;
+import com.goodbuy.googbuylogin.login.UserInfo;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,8 +1,6 @@
-package com.goodbuy.googbuylogin.login.service.impl;
+package com.goodbuy.googbuylogin.login;
 
-import com.goodbuy.googbuylogin.login.entity.UserInfo;
 import com.goodbuy.googbuylogin.login.mapper.UserInfoDao;
-import com.goodbuy.googbuylogin.login.service.UserInfoService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

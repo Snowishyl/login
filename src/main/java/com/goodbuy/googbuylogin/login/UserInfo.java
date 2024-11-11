@@ -1,4 +1,4 @@
-package com.goodbuy.googbuylogin.login.entity;
+package com.goodbuy.googbuylogin.login;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,7 +24,9 @@ public class UserInfo implements Serializable {
     private static final long serialVersionUID = 459556175268068920L;
 
     private Long id;
-
+    /*
+    long 有点大
+     */
     private Long role;
 
     private String description;

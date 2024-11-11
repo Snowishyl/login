@@ -1,6 +1,6 @@
 package com.goodbuy.googbuylogin.login.mapper;
 
-import com.goodbuy.googbuylogin.login.entity.UserInfo;
+import com.goodbuy.googbuylogin.login.UserInfo;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 

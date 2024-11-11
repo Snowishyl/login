@@ -1,4 +1,4 @@
-package com.goodbuy.googbuylogin.login.utils;
+package com.goodbuy.googbuylogin.login;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package com.goodbuy.googbuylogin.login.controller.dto;
+package com.goodbuy.googbuylogin.login;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

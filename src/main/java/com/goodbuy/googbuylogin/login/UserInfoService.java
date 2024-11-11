@@ -1,6 +1,4 @@
-package com.goodbuy.googbuylogin.login.service;
-
-import com.goodbuy.googbuylogin.login.entity.UserInfo;
+package com.goodbuy.googbuylogin.login;
 
 /**
  * (UserInfo)表服务接口

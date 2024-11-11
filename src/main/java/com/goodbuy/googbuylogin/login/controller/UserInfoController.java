@@ -1,7 +1,7 @@
 package com.goodbuy.googbuylogin.login.controller;
 
-import com.goodbuy.googbuylogin.login.entity.UserInfo;
-import com.goodbuy.googbuylogin.login.service.UserInfoService;
+import com.goodbuy.googbuylogin.login.UserInfo;
+import com.goodbuy.googbuylogin.login.UserInfoService;
 import jakarta.annotation.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

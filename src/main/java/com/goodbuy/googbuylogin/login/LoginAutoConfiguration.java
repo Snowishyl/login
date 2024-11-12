@@ -1,7 +1,5 @@
-package com.goodbuy.googbuylogin;
+package com.goodbuy.googbuylogin.login;
 
-import com.goodbuy.googbuylogin.login.LoginIdentifyAspect;
-import com.goodbuy.googbuylogin.login.UserService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +12,6 @@ import org.springframework.context.annotation.Import;
  * @description:
  */
 @EnableConfigurationProperties
-@Import(com.goodbuy.googbuylogin.login.LoginIdentifyAspect.class)
 public class LoginAutoConfiguration {
 
 

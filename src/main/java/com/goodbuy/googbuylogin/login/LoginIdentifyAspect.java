@@ -1,14 +1,15 @@
 package com.goodbuy.googbuylogin.login;
 
-import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
+import org.aspectj.lang.reflect.MethodSignature;
 
+import java.lang.reflect.Method;
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Optional;
 
 /**
  * @author: feiWoSCun
@@ -22,23 +23,26 @@ import java.util.Comparator;
 @Slf4j
 public class LoginIdentifyAspect {
 
-
     private final UserService userService;
 
     public LoginIdentifyAspect(UserService userService) {
         this.userService = userService;
     }
 
-    @Pointcut("@annotation(LoginIdentify)")
-    public void loginIdentifyMethod() {
-    }
 
-    @Before("loginIdentifyMethod() && @annotation(loginIdentify)")
-    public void beforeLoginIdentifyMethod(LoginIdentify loginIdentify) {
+    @Before("@within(com.goodbuy.googbuylogin.login.LoginIdentify) || @annotation(com.goodbuy.googbuylogin.login.LoginIdentify)")
+    public void beforeLoginIdentifyMethod(JoinPoint joinPoint) {
 
         if (userService == null) {
             log.error("userService is null");
             throw new NullPointerException("userService is null");
+        }
+
+        LoginIdentify loginIdentify = Optional.ofNullable(getMethodAnnotation(joinPoint)).orElse(joinPoint.getTarget().getClass().getAnnotation(LoginIdentify.class));
+
+        if (loginIdentify == null) {
+            log.error("loginIdentify is null");
+            throw new NullPointerException("loginIdentify is null");
         }
         //权限去列表
         int[] anyHave = loginIdentify.anyHave();
@@ -79,5 +83,15 @@ public class LoginIdentifyAspect {
             }
         }
         return false;
+    }
+
+    // 获取方法上的 LoginIdentify 注解
+    private LoginIdentify getMethodAnnotation(JoinPoint joinPoint) {
+        try {
+            Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();
+            return method.getAnnotation(LoginIdentify.class);
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

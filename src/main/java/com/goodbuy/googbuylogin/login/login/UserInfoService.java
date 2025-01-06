@@ -1,11 +1,9 @@
-package com.goodbuy.googbuylogin.login;
-
-import org.springframework.stereotype.Repository;
+package com.goodbuy.googbuylogin.login.login;
 
 /**
  * (UserInfo)表服务接口
  *
- * @author feiwoscun
+ * @author makejava
  * @since 2024-11-09 11:50:32
  */
 public interface UserInfoService {

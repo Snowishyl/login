@@ -1,6 +1,5 @@
 package com.goodbuy.googbuylogin.login;
 
-import com.goodbuy.googbuylogin.login.login.JwtUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +9,9 @@ import java.util.Optional;
 public class AuthService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-    private final JwtUtils jwtUtils;
+    private final JwtTokenUtil jwtUtils;
 
-    public AuthService(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder, JwtUtils jwtUtils) {
+    public AuthService(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder, JwtTokenUtil jwtUtils) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.jwtUtils = jwtUtils;

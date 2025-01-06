@@ -1,4 +1,4 @@
-package com.goodbuy.googbuylogin.login.login;
+package com.goodbuy.googbuylogin.login.aspect;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -29,7 +29,7 @@ public class LoginIdentifyAspect {
     }
 
 
-    @Before("@within(com.goodbuy.googbuylogin.login.login.LoginIdentify) || @annotation(com.goodbuy.googbuylogin.login.login.LoginIdentify)")
+    @Before("@within(com.goodbuy.googbuylogin.login.aspect.LoginIdentify) || @annotation(com.goodbuy.googbuylogin.login.aspect.LoginIdentify)")
     public void beforeLoginIdentifyMethod(JoinPoint joinPoint) {
 
         if (userService == null) {

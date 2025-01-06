@@ -1,4 +1,4 @@
-package com.goodbuy.googbuylogin.login.login;
+package com.goodbuy.googbuylogin.login.aspect;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

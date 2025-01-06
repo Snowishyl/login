@@ -1,6 +1,4 @@
-package com.goodbuy.googbuylogin.login;
-
-import org.springframework.stereotype.Service;
+package com.goodbuy.googbuylogin.login.aspect;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
